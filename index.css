@@ -1,0 +1,19 @@
+.nav {
+
+    display: flex;
+    background-color: aqua;
+    gap: 10px;
+
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+#greetings{
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
