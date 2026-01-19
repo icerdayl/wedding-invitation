@@ -1,5 +1,29 @@
 const navEl = document.getElementById("select")
 const gallery = document.getElementById("prenup")
+const songEl = document.getElementById("song")
+
+const clickBtn = document.getElementById("click");
+if (clickBtn) {
+    clickBtn.addEventListener("click", () => {
+        if (!songEl) return;
+        songEl.muted = false;      // unmute
+        songEl.volume = 0.05;     // set desired volume
+        const p = songEl.play();
+        if (p && p.catch) p.catch(() => {}); // swallow play promise rejection
+    });
+}
+
+// Attempt to unmute & autoplay on load; also try once on first user gesture as a fallback
+function tryAutoplayUnmute() {
+    if (!songEl) return;
+    songEl.muted = false;
+    songEl.volume = 0.05;
+    const p = songEl.play();
+    if (p && p.catch) p.catch(() => {});
+}
+
+window.addEventListener('load', tryAutoplayUnmute);
+document.addEventListener('click', tryAutoplayUnmute, { once: true });
 
 document.addEventListener('DOMContentLoaded', () => {
                 const audio = document.getElementById('song') || document.querySelector('header audio');
