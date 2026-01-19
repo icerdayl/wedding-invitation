@@ -1,156 +1,233 @@
-html{
+/* =====================
+   GLOBAL RESET & FIXES
+===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
     scroll-behavior: smooth;
-    scroll-padding-top: 40px;
+    scroll-padding-top: 70px;
 }
 
-h1, h2, h3, p{
-    color: #324363;
-}
-
-header{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
-a{
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =====================
+   TYPOGRAPHY
+===================== */
+h1, h2, h3, p {
+    color: #324363;
+    text-align: center;
+}
+
+a {
     cursor: pointer;
     text-decoration: underline;
     color: #324363;
 }
 
-.nav {
-
+/* =====================
+   HEADER
+===================== */
+header {
     display: flex;
-    top: 0;
-
-    width: 100%;
-    cursor: pointer;
-    position:fixed ;
-    background-color: white;
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-.nav a{
+/* =====================
+   NAVIGATION
+===================== */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    z-index: 1000;
+    padding: 10px;
+    gap: 10px;
+}
+
+.nav a {
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
 }
 
-
-#select{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 25px;
+.select {
+    padding: 8px 14px;
+    font-size: clamp(14px, 3vw, 25px);
     color: #324363;
 }
 
-/* updated to use class selector when multiple nav items exist */
-.select{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 25px;
-    color: #324363;
-}
-
-.select:hover{
-    background-color:#324363;
-    transition: 1s;
+.select:hover {
+    background-color: #324363;
     color: azure;
+    transition: 0.5s;
 }
 
-#monogram{
-    width: 600px;
-    border: none;
-    background-color: white;
-    margin-bottom: -80px;
-    margin-top: -20px;
+
+/* =====================
+   DECORATIVE IMAGES
+===================== */
+
+/* =====================
+   MONOGRAM & GREETING
+===================== */
+#monogram {
+    width: min(80vw, 600px);
+    margin-top: 60px;
+    margin-bottom: -60px;
 }
 
-#greetings{
+#greetings {
     font-family: "Pinyon Script", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-size: clamp(28px, 5vw, 50px);
     text-align: center;
-    font-size: 50px;
+    margin: 40px 0;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* =====================
+   MAIN CONTENT
+===================== */
+main {
+    width: 100%;
+    max-width: 1200px;
 }
 
-#ceremony{
+/* Section spacing */
+main > div {
+    padding: 60px 20px;
+}
+
+/* =====================
+   CEREMONY
+===================== */
+#ceremony {
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
     font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
     font-weight: bold;
-    font-style: normal;
 }
 
-#ceremony img{
-    width: 700px;
+#ceremony img {
+    width: 100%;
+    max-width: 700px;
 }
 
-#reception{
+/* =====================
+   MOTIF
+===================== */
+.motif {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+}
+
+#motif {
+    width: 100%;
+    max-width: 700px;
+    margin-top: -100px;
+    margin-bottom: -60px;
+}
+
+/* =====================
+   RECEPTION
+===================== */
+#reception {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
     font-weight: bold;
-    font-style: normal;
-    animation:  duration timing-function delay iteration-count direction fill-mode;
 }
 
-#reception img{
-    width: 700px;
+#reception img {
+    width: 100%;
+    max-width: 700px;
 }
 
-#prenup{
+/* =====================
+   PRENUP
+===================== */
+#prenup {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column; 
 }
 
-#prenup img{
-    width: 700px;
-    margin-bottom:10px ;
-}
-
-#prenup img{
-    width: 700px;
+#prenup img {
+    width: 100%;
+    max-width: 700px;
     margin-bottom: 10px;
-    transition: width 1s ease;
+    transition: transform 0.5s ease;
 }
 
-#prenup img:hover{
-    width: 730px;
+#prenup img:hover {
+    transform: scale(1.03);
 }
 
+/* =====================
+   RSVP
+===================== */
 #rsvp {
     font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
     font-weight: bold;
-    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* =====================
+   MOBILE OPTIMIZATION
+===================== */
+@media (max-width: 768px) {
+    #design1,
+    #design2 {
+        display: none;
+    }
+
+    main > div {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    h3, p { font-size: 14px; }
+
+    #motif {
+        margin-top: -40px;
+        margin-bottom: -20px;
+    }
 }

@@ -13,6 +13,8 @@ if (clickBtn) {
     });
 }
 
+
+
 // Attempt to unmute & autoplay on load; also try once on first user gesture as a fallback
 function tryAutoplayUnmute() {
     if (!songEl) return;
@@ -79,3 +81,22 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+const faders = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
