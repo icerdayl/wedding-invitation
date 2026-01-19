@@ -1,19 +1,154 @@
+html{
+    scroll-behavior: smooth;
+
+}
+
+h1, h2, h3, p{
+    color: #324363;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #324363;
+}
+
+.nav a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 .nav {
 
     display: flex;
-    background-color: aqua;
-    gap: 10px;
+    top: 0;
 
+    width: 100%;
+    cursor: pointer;
+    position:fixed ;
+    background-color: white;
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+#select{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    color: #324363;
+}
+
+/* updated to use class selector when multiple nav items exist */
+.select{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    color: #324363;
+}
+
+.select:hover{
+    background-color:#324363;
+    transition: 1s;
+    color: azure;
+}
+
+#monogram{
+    width: 600px;
+    border: none;
+    background-color: white;
+    margin-bottom: -80px;
+    margin-top: -20px;
 }
 
 #greetings{
     font-family: "Pinyon Script", cursive;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
     
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ceremony{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+#ceremony img{
+    width: 700px;
+}
+
+#reception{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    animation:  duration timing-function delay iteration-count direction fill-mode;
+}
+
+#reception img{
+    width: 700px;
+}
+
+#prenup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+#prenup img{
+    width: 700px;
+    margin-bottom:10px ;
+}
+
+#prenup img{
+    width: 700px;
+    margin-bottom: 10px;
+    transition: width 1s ease;
+}
+
+#prenup img:hover{
+    width: 730px;
+}
+
+#rsvp {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
