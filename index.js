@@ -1,102 +1,76 @@
-const navEl = document.getElementById("select")
-const gallery = document.getElementById("prenup")
-const songEl = document.getElementById("song")
 
-const clickBtn = document.getElementById("click");
-if (clickBtn) {
-    clickBtn.addEventListener("click", () => {
-        if (!songEl) return;
-        songEl.muted = false;      // unmute
-        songEl.volume = 0.05;     // set desired volume
-        const p = songEl.play();
-        if (p && p.catch) p.catch(() => {}); // swallow play promise rejection
+/* ── Hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const navDrawer = document.getElementById('navDrawer');
+
+hamburger.addEventListener('click', () => {
+    const open = navDrawer.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+});
+
+// Close drawer on link click
+navDrawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navDrawer.classList.remove('open');
+        hamburger.classList.remove('open');
     });
-}
+});
 
-
-
-// Attempt to unmute & autoplay on load; also try once on first user gesture as a fallback
-function tryAutoplayUnmute() {
+/* ── Audio ── */
+const songEl = document.getElementById('song');
+function tryPlay() {
     if (!songEl) return;
     songEl.muted = false;
     songEl.volume = 0.05;
-    const p = songEl.play();
-    if (p && p.catch) p.catch(() => {});
+    songEl.play().catch(() => {});
 }
+window.addEventListener('load', tryPlay);
+document.addEventListener('click', tryPlay, { once: true });
 
-window.addEventListener('load', tryAutoplayUnmute);
-document.addEventListener('click', tryAutoplayUnmute, { once: true });
+/* ── Countdown ── */
+const target = new Date('Aug 30, 2026 15:00:00').getTime();
+function tick() {
+    const now = Date.now();
+    const dist = target - now;
+    if (dist < 0) {
+        document.getElementById('cd-d').textContent = '0';
+        document.getElementById('cd-h').textContent = '0';
+        document.getElementById('cd-m').textContent = '0';
+        document.getElementById('cd-s').textContent = '0';
+        return;
+    }
+    document.getElementById('cd-d').textContent = Math.floor(dist / 86400000);
+    document.getElementById('cd-h').textContent = Math.floor((dist % 86400000) / 3600000);
+    document.getElementById('cd-m').textContent = Math.floor((dist % 3600000) / 60000);
+    document.getElementById('cd-s').textContent = Math.floor((dist % 60000) / 1000);
+}
+tick();
+setInterval(tick, 1000);
 
-document.addEventListener('DOMContentLoaded', () => {
-                const audio = document.getElementById('song') || document.querySelector('header audio');
-                if (audio) audio.volume = 0.05; // value between 0.0 and 1.0
-            });
-
+/* ── Prenup images ── */
+const prenupGrid = document.getElementById('prenupGrid');
 const images = [
-    'items/photo/1.png',
-    'items/photo/2.png',
-    'items/photo/3.png',
-    'items/photo/4.png',
-    'items/photo/5.png',
-    'items/photo/6.png',
-    'items/photo/7.png',
-    'items/photo/8.png',
-    'items/photo/9.png'
+    'items/photo/1.jpg','items/photo/2.jpg','items/photo/3.jpg',
+    'items/photo/4.jpg','items/photo/5.jpg','items/photo/6.jpeg',
+    'items/photo/7.jpg','items/photo/8.jpg','items/photo/9.jpg',
+    'items/photo/10.jpg','items/photo/11.jpg','items/photo/12.jpg', 
 ];
-
-const container = gallery || document.querySelector('.prenup');
-for (let i = 0; i < images.length; i++) {
+images.forEach((src, i) => {
     const img = document.createElement('img');
-    img.src = images[i];
+    img.src = src;
     img.alt = `Prenup ${i + 1}`;
     img.loading = 'lazy';
-    container.appendChild(img);
-}
-
-// Set the date we're counting down to
-var countDownDate = new Date("Aug 30, 2026 16:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d: " + hours + "h: "
-  + minutes + "m: " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    prenupGrid.appendChild(img);
 });
 
-const faders = document.querySelectorAll(".fade");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+/* ── Fade-in on scroll ── */
+const faders = document.querySelectorAll('.fade-up');
+const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
         }
     });
-}, { threshold: 0.2 });
-
-faders.forEach(el => observer.observe(el));
+}, { threshold: 0.12 });
+faders.forEach(el => io.observe(el));
