@@ -26,7 +26,7 @@ html {
 body {
     background: var(--cream);
     color: var(--navy);
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     overflow-x: hidden;
 }
 
@@ -64,7 +64,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .nav-links a {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -122,7 +122,7 @@ a { color: var(--navy); cursor: pointer; }
 .nav-drawer.open { display: flex; }
 
 .nav-drawer a {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -161,7 +161,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .hero-eyebrow {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.25em;
@@ -188,7 +188,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .hero-invite {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(16px, 2.5vw, 22px);
     color: var(--navy-mid);
     margin: 36px 0 8px;
@@ -196,7 +196,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .hero-date {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(22px, 4.5vw, 42px);
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -205,7 +205,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .hero-sub {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: clamp(15px, 2vw, 19px);
     color: var(--steel);
@@ -228,7 +228,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .countdown-num {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(28px, 5vw, 48px);
     font-weight: 700;
     color: var(--navy);
@@ -236,7 +236,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .countdown-label {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 9px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -245,7 +245,7 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .countdown-sep {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
     color: var(--light-blue);
     align-self: flex-start;
@@ -262,7 +262,7 @@ section {
 }
 
 .section-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(18px, 3vw, 26px);
     font-weight: 700;
     letter-spacing: 0.15em;
@@ -313,7 +313,7 @@ section {
 }
 
 .venue-tag {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.2em;
@@ -326,7 +326,7 @@ section {
 }
 
 .venue-name {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(14px, 2vw, 18px);
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -335,14 +335,14 @@ section {
 }
 
 .venue-detail {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(15px, 2vw, 18px);
     color: var(--navy-mid);
     line-height: 1.6;
 }
 
 .venue-link {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 10px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -379,7 +379,7 @@ section {
 }
 
 .swatch-name {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 9px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -407,7 +407,7 @@ section {
 }
 
 .entourage-group-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -431,7 +431,7 @@ section {
 }
 
 .entourage-col-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -444,7 +444,7 @@ section {
 }
 
 .entourage-names {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(15px, 2vw, 17px);
     color: var(--navy-mid);
     line-height: 1.9;
@@ -507,7 +507,7 @@ section {
 }
 
 .timeline-event {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -516,7 +516,7 @@ section {
 }
 
 .timeline-date {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(15px, 2vw, 18px);
     font-weight: 600;
     color: var(--navy);
@@ -541,7 +541,7 @@ section {
 }
 
 .attire-card-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -551,14 +551,14 @@ section {
 }
 
 .attire-card-body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(15px, 2vw, 17px);
     color: var(--navy-mid);
     line-height: 1.8;
 }
 
 .attire-note {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: clamp(14px, 1.8vw, 16px);
     color: var(--steel);
@@ -574,7 +574,7 @@ section {
 }
 
 .rsvp-body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(16px, 2.5vw, 20px);
     color: var(--navy-mid);
     line-height: 1.8;
@@ -582,7 +582,7 @@ section {
 }
 
 .rsvp-contact {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -592,7 +592,7 @@ section {
 
 .btn {
     display: inline-block;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -649,7 +649,7 @@ footer {
 }
 
 footer p {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 14px;
     color: var(--steel);
@@ -801,7 +801,7 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     letter-spacing: 0.18em;
     color: rgba(255,255,255,0.6);
