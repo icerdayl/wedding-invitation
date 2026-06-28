@@ -849,3 +849,11 @@ footer p {
         max-width: 280px;
     }
 }
+
+.hidden-gift{
+    display: none;
+}
+
+.gift-card a:hover {
+    transform: smooth; transition-duration: 500ms;
+}

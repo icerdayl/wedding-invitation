@@ -183,7 +183,17 @@ lbEl.addEventListener('touchend',   e => {
 });
 
 /* ── QR / Gift images — single-image lightbox ── */
-document.querySelectorAll('.lb-trigger').forEach(img => {
+// Existing lb-trigger images (prenup images, etc.)
+document.querySelectorAll('img.lb-trigger').forEach(img => {
     img.style.cursor = 'pointer';
     img.addEventListener('click', () => openLightbox(img.src, [img.src], 0));
+});
+
+// Gift buttons
+document.querySelectorAll('.gift-trigger').forEach(btn => {
+    btn.style.cursor = 'pointer';
+    btn.addEventListener('click', () => {
+        const src = btn.dataset.img;
+        openLightbox(src, [src], 0);
+    });
 });
