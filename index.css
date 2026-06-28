@@ -171,12 +171,11 @@ a { color: var(--navy); cursor: pointer; }
 }
 
 .hero-script {
-    font-family: "Tangerine", cursive;
+    font-family: "Italianno", cursive;
     font-size: clamp(80px, 16vw, 160px);
     color: var(--navy);
     line-height: 0.85;
     margin-bottom: 8px;
-    font-weight: bold;
 }
 
 .hero-and {
@@ -445,7 +444,7 @@ section {
 }
 
 .entourage-names {
-    font-family: 'Libre Caslon Display', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(15px, 2vw, 17px);
     color: var(--navy-mid);
     line-height: 1.9;

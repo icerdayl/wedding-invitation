@@ -67,7 +67,7 @@ const images = [
     'items/photo/17.jpg',
     'items/photo/18.jpg',
     'items/photo/19.jpeg',
-    'items/photo/20.jpg',
+
     'items/photo/21.jpg',
     'items/photo/22.jpg',
     'items/photo/23.jpg',
