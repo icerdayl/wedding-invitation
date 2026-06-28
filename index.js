@@ -48,10 +48,33 @@ setInterval(tick, 1000);
 /* ── Prenup images ── */
 const prenupGrid = document.getElementById('prenupGrid');
 const images = [
-    'items/photo/1.jpg','items/photo/2.jpg','items/photo/3.jpg',
-    'items/photo/4.jpg','items/photo/5.jpg','items/photo/6.jpeg',
-    'items/photo/7.jpg','items/photo/8.jpg','items/photo/9.jpg',
-    'items/photo/10.jpg','items/photo/11.jpg','items/photo/12.jpg',
+    'items/photo/1.jpg',
+    'items/photo/2.jpg',
+    'items/photo/3.jpg',
+    'items/photo/4.jpg',
+    'items/photo/5.jpg',
+    'items/photo/6.jpeg',
+    'items/photo/7.jpg',
+    'items/photo/8.jpg',
+    'items/photo/9.jpg',
+    'items/photo/10.jpg',
+    'items/photo/11.jpg',
+    'items/photo/12.jpg',
+    'items/photo/13.jpg',
+    'items/photo/14.jpg',
+    'items/photo/15.jpg',
+    'items/photo/16.jpg',
+    'items/photo/17.jpg',
+    'items/photo/18.jpg',
+    'items/photo/19.jpeg',
+    'items/photo/20.jpg',
+    'items/photo/21.jpg',
+    'items/photo/22.jpg',
+    'items/photo/23.jpg',
+    'items/photo/24.jpg',
+    'items/photo/25.jpg',
+    'items/photo/26.jpg',
+    'items/photo/27.jpg',
 ];
 images.forEach((src, i) => {
     const img = document.createElement('img');
